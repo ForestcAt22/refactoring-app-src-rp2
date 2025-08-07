@@ -20,18 +20,16 @@ public class DBManager {
 	 * DBと接続する
 	 *
 	 * @return DBコネクション
-	 * @throws ClassNotFoundException
-	 *             ドライバクラスが見つからなかった場合
-	 * @throws SQLException
-	 *             DB接続に失敗した場合
+	 * @throws ClassNotFoundException　ドライバクラスが見つからなかった場合
+	 * @throws SQLException　DB接続に失敗した場合
 	 */
 	public static Connection getConnection() throws ClassNotFoundException, SQLException {
 
 		// JDBCドライバクラスをJVMに登録
-		Class.forName(JDBC_DRIVER);
+		Class.forName(DB_JDBC_DRIVER);
 
 		// DBに接続
-		Connection connection = DriverManager.getConnection(DB_URL, USER_NAME, PASSWORD);
+		Connection connection = DriverManager.getConnection(DB_URL, DB_USER_NAME, DB_PASSWORD);
 
 		return connection;
 	}
@@ -39,10 +37,8 @@ public class DBManager {
 	/**
 	 * DBとの接続を切断する
 	 *
-	 * @param connection
-	 *            DBとの接続情報
-	 * @throws SQLException
-	 *             クローズ処理に失敗した場合に送出
+	 * @param connection　DBとの接続情報
+	 * @throws SQLException	　クローズ処理に失敗した場合に送出
 	 */
 	public static void close(Connection connection) throws SQLException {
 		if (connection != null) {
@@ -53,10 +49,8 @@ public class DBManager {
 	/**
 	 * PreparedStatementをクローズする
 	 *
-	 * @param preparedStatement
-	 *            ステートメント情報
-	 * @throws SQLException
-	 *             クローズ処理に失敗した場合に送出
+	 * @param preparedStatement　ステートメント情報
+	 * @throws SQLException　クローズ処理に失敗した場合に送出
 	 */
 	public static void close(PreparedStatement preparedStatement) throws SQLException {
 		if (preparedStatement != null) {
@@ -67,10 +61,8 @@ public class DBManager {
 	/**
 	 * ResultSetをクローズする
 	 *
-	 * @param resultSet
-	 *            SQL検索結果
-	 * @throws SQLException
-	 *             クローズ処理に失敗した場合に送出
+	 * @param resultSet　SQL検索結果
+	 * @throws SQLException　クローズ処理に失敗した場合に送出
 	 */
 	public static void close(ResultSet resultSet) throws SQLException {
 		if (resultSet != null) {
