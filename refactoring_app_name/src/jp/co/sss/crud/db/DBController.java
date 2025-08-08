@@ -57,15 +57,15 @@ public class DBController {
 
 				int gender = Integer.parseInt(resultSet.getString("gender"));
 				if (gender == Constants.GENDER_NOT_SPECIFIED) {
-					System.out.print("回答なし" + "\t");
+					System.out.print(Constants.GENDER_STR_NOT_SPECIFIED + "\t");
 				} else if (gender == Constants.GENDER_MALE) {
-					System.out.print("男性" + "\t");
+					System.out.print(Constants.GENDER_STR_MALE + "\t");
 
 				} else if (gender == Constants.GENDER_FEMALE) {
-					System.out.print("女性" + "\t");
+					System.out.print(Constants.GENDER_STR_FEMALE + "\t");
 
 				} else if (gender == Constants.GENDER_OTHER) {
-					System.out.print("その他" + "\t");
+					System.out.print(Constants.GENDER_STR_OTHER + "\t");
 
 				}
 
@@ -228,11 +228,11 @@ public class DBController {
 
 				String deptIdString = resultSet.getString("dept_id");
 				int deptIdValue = Integer.parseInt(deptIdString);
-				if (deptIdValue == 1) {
+				if (deptIdValue == Constants.DEPARTMENT_ID_SALES) {
 					System.out.print("営業部");
-				} else if (deptIdValue == 2) {
+				} else if (deptIdValue == Constants.DEPARTMENT_ID_ACCOUNTING) {
 					System.out.print("経理部");
-				} else if (deptIdValue == 3) {
+				} else if (deptIdValue == Constants.DEPARTMENT_ID_GENERAL) {
 					System.out.print("総務部");
 
 				}
@@ -323,11 +323,11 @@ public class DBController {
 			String deptId = br.readLine();
 
 			// 入力値をバインド
-			preparedStatement.setString(1, emp_name);
-			preparedStatement.setString(2, gender);
-			preparedStatement.setString(3, birthday);
-			preparedStatement.setString(4, deptId);
-			preparedStatement.setString(5, empId);
+			preparedStatement.setString(Constants.UPDATE_PARAM_EMPLOYEE_NAME, emp_name);
+			preparedStatement.setString(Constants.UPDATE_PARAM_GENDER, gender);
+			preparedStatement.setString(Constants.UPDATE_PARAM_BIRTHDAY, birthday);
+			preparedStatement.setString(Constants.UPDATE_PARAM_DEPARTMENT_ID, deptId);
+			preparedStatement.setString(Constants.UPDATE_PARAM_EMPLOYEE_ID, empId);
 
 			// SQL文の実行(失敗時は戻り値0)
 			preparedStatement.executeUpdate();
