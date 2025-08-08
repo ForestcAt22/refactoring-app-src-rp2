@@ -133,15 +133,15 @@ public class DBController {
 				String genderValue = resultSet.getString("gender");
 				int gender = Integer.parseInt(genderValue);
 				if (gender == Constants.GENDER_NOT_SPECIFIED) {
-					System.out.print("回答なし");
+					System.out.print(Constants.GENDER_STR_NOT_SPECIFIED);
 				} else if (gender == Constants.GENDER_MALE) {
-					System.out.print("男性");
+					System.out.print(Constants.GENDER_STR_MALE);
 
 				} else if (gender == Constants.GENDER_FEMALE) {
-					System.out.print("女性");
+					System.out.print(Constants.GENDER_STR_FEMALE);
 
 				} else if (gender == Constants.GENDER_OTHER) {
-					System.out.print("その他");
+					System.out.print(Constants.GENDER_STR_OTHER);
 
 				}
 
@@ -210,15 +210,15 @@ public class DBController {
 				String genderString = resultSet.getString("gender");
 				int gender = Integer.parseInt(genderString);
 				if (gender == Constants.GENDER_NOT_SPECIFIED) {
-					System.out.print("回答なし");
+					System.out.print(Constants.GENDER_STR_NOT_SPECIFIED);
 				} else if (gender == Constants.GENDER_MALE) {
-					System.out.print("男性");
+					System.out.print(Constants.GENDER_STR_MALE);
 
 				} else if (gender == Constants.GENDER_FEMALE) {
-					System.out.print("女性");
+					System.out.print(Constants.GENDER_STR_FEMALE);
 
 				} else if (gender == Constants.GENDER_OTHER) {
-					System.out.print("その他");
+					System.out.print(Constants.GENDER_STR_OTHER);
 
 				}
 
@@ -229,11 +229,11 @@ public class DBController {
 				String deptIdString = resultSet.getString("dept_id");
 				int deptIdValue = Integer.parseInt(deptIdString);
 				if (deptIdValue == 1) {
-					System.out.print("1");
+					System.out.print("営業部");
 				} else if (deptIdValue == 2) {
-					System.out.print("1");
+					System.out.print("経理部");
 				} else if (gender == 3) {
-					System.out.print("2");
+					System.out.print("総務部");
 
 				}
 
