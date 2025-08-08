@@ -30,6 +30,19 @@ public final class Constants {
 	public static final String UPDATE_SUCCESS = "社員情報を更新しました";
 	public static final String DELETE_SUCCESS = "社員情報を削除しました";
 
+	//INSERT文のインデックス
+	public static final int INSERT_PARAM_EMPLOYEE_NAME = 1;
+	public static final int INSERT_PARAM_GENDER = 2;
+	public static final int INSERT_PARAM_BIRTHDAY = 3;
+	public static final int INSERT_PARAM_DEPARTMENT_ID = 4;
+
+	//UPDATE文のインデックス
+	public static final int UPDATE_PARAM_EMPLOYEE_NAME = 1;
+	public static final int UPDATE_PARAM_GENDER = 2;
+	public static final int UPDATE_PARAM_BIRTHDAY = 3;
+	public static final int UPDATE_PARAM_DEPARTMENT_ID = 4;
+	public static final int UPDATE_PARAM_EMPLOYEE_ID = 5;
+
 	//MainSystem関連の定数
 	public static final String IMPUT_EMPLOYEE_SEARCH = "社員名";
 	public static final String IMPUT_DEPARTMENT_ID_SEARCH = "部署ID(1:営業部、2:経理部、3:総務部)を入力してください:";
@@ -50,7 +63,7 @@ public final class Constants {
 
 	//部署IDの定数
 	public static final int DEPARTMENT_ID_SALES = 1;
-	public static final int DEPARTMENT_ID_ACCOUTING = 2;
+	public static final int DEPARTMENT_ID_ACCOUNTING = 2;
 	public static final int DEPARTMENT_ID_GENERAL = 3;
 
 	//部署の文字列定数
