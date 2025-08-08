@@ -43,6 +43,10 @@ public final class Constants {
 	public static final int UPDATE_PARAM_DEPARTMENT_ID = 4;
 	public static final int UPDATE_PARAM_EMPLOYEE_ID = 5;
 
+	//既存の定数 
+	public static final int FIND_BY_EMPLOYEE_NAME_PARAM = 1;
+	public static final int FIND_BY_DEPARTMENT_ID_PARAM = 1;
+
 	//MainSystem関連の定数
 	public static final String IMPUT_EMPLOYEE_SEARCH = "社員名";
 	public static final String IMPUT_DEPARTMENT_ID_SEARCH = "部署ID(1:営業部、2:経理部、3:総務部)を入力してください:";

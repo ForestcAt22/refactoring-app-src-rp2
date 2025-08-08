@@ -113,7 +113,7 @@ public class DBController {
 			preparedStatement = connection.prepareStatement(sql.toString());
 
 			// 検索条件となる値をバインド
-			preparedStatement.setString(1, "%" + keyword + "%");
+			preparedStatement.setString(Constants.FIND_BY_EMPLOYEE_NAME_PARAM, "%" + keyword + "%");
 
 			// SQL文を実行
 			resultSet = preparedStatement.executeQuery();
@@ -189,7 +189,7 @@ public class DBController {
 			preparedStatement = connection.prepareStatement(sql.toString());
 
 			// 検索条件となる値をバインド
-			preparedStatement.setString(1, deptId);
+			preparedStatement.setString(Constants.FIND_BY_DEPARTMENT_ID_PARAM, deptId);
 
 			// SQL文を実行
 			resultSet = preparedStatement.executeQuery();
