@@ -232,7 +232,7 @@ public class DBController {
 					System.out.print("営業部");
 				} else if (deptIdValue == 2) {
 					System.out.print("経理部");
-				} else if (gender == 3) {
+				} else if (deptIdValue == 3) {
 					System.out.print("総務部");
 
 				}

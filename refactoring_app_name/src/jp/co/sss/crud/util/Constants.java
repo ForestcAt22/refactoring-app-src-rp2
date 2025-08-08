@@ -48,5 +48,9 @@ public final class Constants {
 	public static final String GENDER_STR_FEMALE = "女性";
 	public static final String GENDER_STR_OTHER = "その他";
 
-	//部署IDの定数
+	//部署の文字列定数
+	public static final String DEPARTMENT_STR_SALES = "営業部";
+	public static final String DEPARTMENT_STR_ACCOUNTING = "経理部";
+	public static final String DEPARTMENT_STR_GENERAL = "総務部";
+
 }
